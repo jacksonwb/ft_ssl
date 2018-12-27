@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ssl_md5.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jbeall <jbeall@student.42.us.org>          +#+  +:+       +#+        */
+/*   By: jackson <jbeall@student.42.us.org>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/17 16:09:26 by jbeall            #+#    #+#             */
-/*   Updated: 2018/12/26 13:06:47 by jbeall           ###   ########.fr       */
+/*   Updated: 2018/12/27 10:29:13 by jackson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ void		md5_print(char *str, unsigned int *digest, int flags, int mode)
 	ft_printf("\n");
 }
 
-uint64_t	md5_len_endian(unsigned long long int *len)
+uint64_t	md5_len_endian(uint64_t *len)
 {
 	return (*len) * 8;
 }

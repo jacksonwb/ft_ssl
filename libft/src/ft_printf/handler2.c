@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   handler2.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jbeall <jbeall@student.42.us.org>          +#+  +:+       +#+        */
+/*   By: jackson <jbeall@student.42.us.org>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/25 14:26:34 by jbeall            #+#    #+#             */
-/*   Updated: 2018/11/26 20:55:40 by jbeall           ###   ########.fr       */
+/*   Updated: 2018/12/27 10:29:13 by jackson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int			handle_u(t_block *block, va_list ap)
 {
-	unsigned long long int	n;
+	uint64_t	n;
 	char					*s;
 
 	n = unsigned_handle_mod(block, ap);
@@ -24,7 +24,7 @@ int			handle_u(t_block *block, va_list ap)
 
 int			handle_o(t_block *block, va_list ap)
 {
-	unsigned long long int	n;
+	uint64_t	n;
 	char					*s;
 
 	n = unsigned_handle_mod(block, ap);
@@ -42,7 +42,7 @@ int			handle_o(t_block *block, va_list ap)
 
 int			handle_x(t_block *block, va_list ap)
 {
-	unsigned long long int	n;
+	uint64_t	n;
 	char					*s;
 	char					*prepend;
 	char					hex_char;

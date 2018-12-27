@@ -24,7 +24,7 @@ LIB = ./libft/libft.a
 $(NAME):
 	@make -C ./libft --no-print-directory
 	@echo "Creating $(NAME) executable..."
-	@gcc -o $(NAME) $(FLAGS) $(addprefix $(SRC_DIR), $(SRC)) $(LIB) -I$(LIB_INC_DIR) -I$(INC_DIR) -O3
+	@clang -o $(NAME) $(FLAGS) $(addprefix $(SRC_DIR), $(SRC)) $(LIB) -I$(LIB_INC_DIR) -I$(INC_DIR) -O3
 	@echo "\033[92mdone!\033[0m"
 all: $(NAME)
 dev:

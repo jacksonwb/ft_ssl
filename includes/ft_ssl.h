@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ssl.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jbeall <jbeall@student.42.us.org>          +#+  +:+       +#+        */
+/*   By: jackson <jbeall@student.42.us.org>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/14 16:10:08 by jbeall            #+#    #+#             */
-/*   Updated: 2018/12/26 16:54:37 by jbeall           ###   ########.fr       */
+/*   Updated: 2018/12/27 10:29:13 by jackson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FT_SSL_H
 # include <fcntl.h>
 # include <stdio.h>
+# include <stdint.h>
 # include "libft.h"
 # include "ft_printf.h"
 
@@ -46,7 +47,7 @@ typedef struct		s_md5_in
 	char			*str;
 	int				fd;
 	int				flags;
-	uint64_t		(*ssl_len_endian)(unsigned long long int*);
+	uint64_t		(*ssl_len_endian)(uint64_t*);
 }					t_md5_in;
 
 typedef struct		s_md5_vars
@@ -95,6 +96,7 @@ typedef struct		s_sha512_vars
 	uint64_t		temp1;
 	uint64_t		temp2;
 }					t_sha512_vars;
+
 /*
 ** FT_SSL
 */
@@ -122,7 +124,7 @@ void				md5_block(unsigned int *dgst, t_md5_block *block);
 void				md5_buf(t_md5_in in, unsigned int *digest);
 void				md5_print(char *str, unsigned int *digest,
 	int flags, int mode);
-uint64_t			md5_len_endian(unsigned long long int *len);
+uint64_t			md5_len_endian(uint64_t *len);
 void				gnb_helper1(t_md5_in *in, t_md5_block *block,
 	int *count, int *i);
 unsigned int		get_md5_s(int i);
@@ -142,7 +144,7 @@ void				md5_do_op(int i, t_md5_vars *vars);
 int					sha256_handle(int args, char **argv);
 void				sha256_dispatch(char *str, int mode, int flags);
 void				sha256_buf(t_md5_in in, unsigned int *digest);
-uint64_t			sha256_len_endian(unsigned long long int *len);
+uint64_t			sha256_len_endian(uint64_t *len);
 void				sha256_block(unsigned int *digest, t_md5_block *block);
 int					sha256_set_flags_dispatch(int i, char **argv, int flags,
 	char *str);
@@ -155,7 +157,7 @@ void				sha256_add_digest(unsigned int *digest,
 unsigned int		get_sha256_k(int i);
 void				sha256_rotate_vars(t_sha256_vars *vars);
 void				sha256_no_str_err(void);
-uint64_t			sha256_len_endian(unsigned long long int *len);
+uint64_t			sha256_len_endian(uint64_t *len);
 void				sha256_init_digest(unsigned int *digest);
 void				sha256_print(char *str, unsigned int *digest,
 	int flags, int mode);

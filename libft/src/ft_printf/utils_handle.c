@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils_handle.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jbeall <jbeall@student.42.us.org>          +#+  +:+       +#+        */
+/*   By: jackson <jbeall@student.42.us.org>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/25 14:30:51 by jbeall            #+#    #+#             */
-/*   Updated: 2018/11/26 21:18:47 by jbeall           ###   ########.fr       */
+/*   Updated: 2018/12/27 10:29:13 by jackson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,12 @@ long long int			signed_handle_mod(t_block *block, va_list ap)
 	return (n);
 }
 
-unsigned long long int	unsigned_handle_mod(t_block *block, va_list ap)
+uint64_t	unsigned_handle_mod(t_block *block, va_list ap)
 {
-	unsigned long long int n;
+	uint64_t n;
 
 	if (block->mod == LL)
-		n = va_arg(ap, unsigned long long int);
+		n = va_arg(ap, uint64_t);
 	else if (block->mod == L)
 		n = va_arg(ap, unsigned long int);
 	else if (block->mod == H)

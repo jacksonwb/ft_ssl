@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ssl_sha256_helpers2.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jbeall <jbeall@student.42.us.org>          +#+  +:+       +#+        */
+/*   By: jackson <jbeall@student.42.us.org>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/26 12:49:45 by jbeall            #+#    #+#             */
-/*   Updated: 2018/12/26 13:12:32 by jbeall           ###   ########.fr       */
+/*   Updated: 2018/12/27 10:29:13 by jackson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void		sha256_no_str_err(void)
 	exit(0);
 }
 
-uint64_t	sha256_len_endian(unsigned long long int *len)
+uint64_t	sha256_len_endian(uint64_t *len)
 {
 	int			j;
 	uint64_t	temp;

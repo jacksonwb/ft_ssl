@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jbeall <jbeall@student.42.us.org>          +#+  +:+       +#+        */
+/*   By: jackson <jbeall@student.42.us.org>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 15:45:23 by jbeall            #+#    #+#             */
-/*   Updated: 2018/11/27 14:49:16 by jbeall           ###   ########.fr       */
+/*   Updated: 2018/12/27 10:29:13 by jackson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	*pf_dtoa_signed(long long int n)
 	return (s);
 }
 
-char	*pf_dtoa_u(unsigned long long int n, int base, char c)
+char	*pf_dtoa_u(uint64_t n, int base, char c)
 {
 	char				*s;
 	int					i;

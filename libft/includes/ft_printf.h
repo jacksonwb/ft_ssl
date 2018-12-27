@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jbeall <jbeall@student.42.us.org>          +#+  +:+       +#+        */
+/*   By: jackson <jbeall@student.42.us.org>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 10:08:21 by jbeall            #+#    #+#             */
-/*   Updated: 2018/12/14 17:30:18 by jbeall           ###   ########.fr       */
+/*   Updated: 2018/12/27 10:29:13 by jackson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ int						handle_plain(const char *s);
 ** Handler utilities
 */
 long long int			signed_handle_mod(t_block *block, va_list ap);
-unsigned long long int	unsigned_handle_mod(t_block *block, va_list ap);
+uint64_t	unsigned_handle_mod(t_block *block, va_list ap);
 int						write_unsigned(t_block *block, unsigned long long n,
 	char *s, char *prepend);
 long double				float_handle_mod(t_block *block, va_list ap);
@@ -111,7 +111,7 @@ char					set_sign(long long int n, t_block *block);
 void					write_padding(int len, char c);
 char					*pf_dtoa_signed(long long int n);
 int						places(unsigned long long n, int base);
-char					*pf_dtoa_u(unsigned long long int n, int base, char c);
+char					*pf_dtoa_u(uint64_t n, int base, char c);
 void					zero_helper(t_block *block, int *count);
 int						is_nan(long double f);
 int						is_inf(long double f);

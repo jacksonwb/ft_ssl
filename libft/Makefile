@@ -51,7 +51,7 @@ INC = ./includes
 
 $(NAME): $(SRC)
 	@echo "Building libft.a library..."
-	@gcc $(FLAGS) -c $(SRC) $(SRC_FT_PRINTF) -I$(INC)
+	@clang $(FLAGS) -c $(SRC) $(SRC_FT_PRINTF) -I$(INC)
 	@ar -rc $(NAME) $(OBJ)
 	@echo "\033[92mdone!\033[0m"
 all: $(NAME)
