@@ -20,7 +20,9 @@ The goal of this project is to understund the behaviour of the OpenSSL library a
 `rasutl`
 
 ## Using this binary
-usage for this binary is as follows:
+Build the binary using `make`
+
+Usage for this binary is as follows:
 `ft_ssl commad [command opts] [command args]`
 
 ### Hash Functions
