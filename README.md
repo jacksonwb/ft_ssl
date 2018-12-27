@@ -11,10 +11,13 @@ The goal of this project is to understund the behaviour of the OpenSSL library a
 
 ### Future Functions
 `base64`
-`DES`
-`DES-ecb`
-`DES-csc`
-`RSA`
+`des`
+`des-ecb`
+`des-csc`
+`genrsa`
+`urandom`
+`rsa`
+`rasutl`
 
 ## Using this binary
 usage for this binary is as follows:
