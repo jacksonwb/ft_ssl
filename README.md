@@ -37,3 +37,5 @@ The following flags are supported:
 `-r` - reverse output format
 
 `-s` - find the hash for the string to be given after this flag or in the following argument
+
+Note: this sha512 implementation only supports messages with lengths representable using 64 bit integers (~2.3 Exabytes), instead of the 2^128 bit message length required by the standard.
