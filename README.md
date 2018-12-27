@@ -21,6 +21,7 @@ The goal of this project is to understund the behaviour of the OpenSSL library a
 
 ## Using this binary
 Build the binary using `make`
+
 `clang` is required to build
 
 Usage for this binary is as follows:
