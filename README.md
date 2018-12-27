@@ -31,7 +31,7 @@ usage for this binary is as follows:
 The hashing functions have the following usage:
 `[hash_type] [-pqr] [-s string] [files...]`
 
-All hashing functions can read from `STDIN`, any number of strings specified as args, or any number of files.
+All hashing functions can read from `STDIN`, take any number of strings specified as args, or any number of files.
 The following flags are supported:
 `-p` - read from `STDIN`, echo the input and calculate the hash
 
