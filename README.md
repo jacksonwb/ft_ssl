@@ -2,7 +2,7 @@
 This is a partial recode of the OpenSSL crypography library implemented in C
 
 ## Description
-The goal of this project is to understund the behaviour of the OpenSSL library and gain an understanding of the fundamentals of cryptography by reimplementing some of its functionality from the ground up.
+The goal of this project is to understand the behaviour of the OpenSSL library and gain an understanding of the fundamentals of cryptography by reimplementing some of its functionality from the ground up.
 
 ### Current Functions
 `md5`
